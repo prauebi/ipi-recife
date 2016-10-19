@@ -22,23 +22,23 @@ $(document).ready(function() {
 	});
 
   // $("#mensagens").mouseenter(
-  // function(){
-  //   var $this = $(this);
-  //   var offset = $this.offset();
-  //   var width = $this.width();
-  //   var height = $this.height();
+  //   function(){
+  //      var $this = $(this);
+  //      var offset = $this.offset();
+  //      var width = $this.width();
+  //      var height = $this.height();
 
-  //   var centerX = offset.left + width / 2;
-  //   var centerY = offset.top + height / 2;
+  //      var centerX = offset.left + width / 2;
+  //      var centerY = offset.top + height / 2;
 
-  //   $(".nav-bottom").after().animate({left:centerX },'slow');
+  //      $(".nav-bottom").after().animate({left:centerX },'slow');
 
   // });
 
-// $(".tabb tr").mouseleave(
-//   function() {
-//     $(this).find("td #headie").animate({marginLeft:'0px'},'slow')
-//   });
+  // $(".tabb tr").mouseleave(
+  //  function() {
+  //    $(this).find("td #headie").animate({marginLeft:'0px'},'slow')
+  // });
 
   	///////////////////////////////////
     //     Mostra logo no scroll     // 
@@ -48,13 +48,18 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         var y = $(window).scrollTop();
-        if (y > 300) {
-            $('#logo-color').show();
+        var windowHeight = window.innerHeight-150; //pega o tamanho da janela
 
+        if (y > windowHeight) { //compara a distancia do top da janela com o tamanho da janela
+
+            $('#logo-color').show();
             $('#logo-bw').hide();
 
             $(".navbar-default").css({
-                'background': 'white',
+                'background': 'white'
+            });
+
+            $(".navbar-default .navbar-nav>li>a").css({
                 'color': '#222'
             });
             
@@ -64,6 +69,10 @@ $(document).ready(function() {
 
             $(".navbar-default").css({
                 'background': 'transparent'
+            });
+
+            $(".navbar-default .navbar-nav>li>a").css({
+                'color': 'white'
             });
         }
     });

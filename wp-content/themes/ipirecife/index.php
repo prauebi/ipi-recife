@@ -109,9 +109,10 @@
 
     </div> <!-- /container -->
 
-    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/arrow.png" class="center-block" alt="arrow">
+    <!-- <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/arrow.png" class="center-block" alt="arrow" id="lvlp"> -->
 
     <div class="nav-bottom">
+      <div class="lava-ipi"></div>
     </div>
 
     <div class="container">
@@ -122,29 +123,19 @@
 
         <section class="responsive slider">
 
-            <div class="col-md-3">
-              <div class="box">
-                <div class="evento-content">
+            <?php while ( have_posts() ) : the_post(); ?>
 
-                </div>
+            <div class="col-md-3 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+
+              <div class="box">
+                <?php
+                  if ( has_post_thumbnail() ) {
+                  the_post_thumbnail();
+                } ?>
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="box">
-                <div class="evento-content">
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="box">
-                <div class="evento-content">
-
-                </div>
-              </div>
-            </div>
+            <?php endwhile; ?>
 
             <div class="col-md-3">
               <div class="box">
@@ -152,38 +143,7 @@
 
                 </div>
               </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="box">
-                <div class="evento-content">
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="box">
-                <div class="evento-content">
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="box">
-                <div class="evento-content">
-
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-3">
-              <div class="box">
-                <div class="evento-content">
-
-                </div>
-              </div>
-            </div>
+            </div> <!-- BLOG BOX 1 -->
 
         </section>
 
