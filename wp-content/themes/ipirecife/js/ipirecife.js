@@ -3,52 +3,31 @@ $(document).ready(function() {
 	$("#sou-novo").hover(function() {
       $(".nav-bottom").toggleClass("sou-novo");          //Muda a cor da barra de fundo
     	$(".lavalamp-object").toggleClass("sou-novo");     //Muda a cor do triangulo lavalamp
-    	$("#caption-novo").toggleClass("show-caption");    //Mostra os links
-    	$("#content-novo").toggleClass("show-caption");    //Desliza ícone para esquerda
-	});
+      $("#content-novo").toggleClass("push-img-left");    //Mostra os links
+    	$("#caption-novo").toggleClass("show-caption");
+  });
 
-	$("#sou-membro").hover(function() {
+  $("#sou-membro").hover(function() {
       $(".nav-bottom").toggleClass("sou-membro");
-    	$(".lavalamp-object").toggleClass("sou-membro");
-    	$("#caption-membro").toggleClass("show-caption");
-    	$("#content-membro").toggleClass("show-caption");
+      $(".lavalamp-object").toggleClass("sou-membro");
+      $("#caption-membro").toggleClass("show-caption");
 	});
 
 	$("#mensagens").hover(function() {
       $(".nav-bottom").toggleClass("mensagens");
     	$(".lavalamp-object").toggleClass("mensagens");
     	$("#caption-mensagens").toggleClass("show-caption");
-    	$("#content-mensagens").toggleClass("show-caption");
 	});
 
-  // $("#mensagens").mouseenter(
-  //   function(){
-  //      var $this = $(this);
-  //      var offset = $this.offset();
-  //      var width = $this.width();
-  //      var height = $this.height();
-
-  //      var centerX = offset.left + width / 2;
-  //      var centerY = offset.top + height / 2;
-
-  //      $(".nav-bottom").after().animate({left:centerX },'slow');
-
-  // });
-
-  // $(".tabb tr").mouseleave(
-  //  function() {
-  //    $(this).find("td #headie").animate({marginLeft:'0px'},'slow')
-  // });
 
   	///////////////////////////////////
     //     Mostra logo no scroll     // 
     ///////////////////////////////////
 
-    $('#logo-color').hide();
-
     $(window).scroll(function() {
+
         var y = $(window).scrollTop();
-        var windowHeight = window.innerHeight-150; //pega o tamanho da janela
+        var windowHeight = (window.innerHeight)*0.20; //pega ,em pixels, 20% do tamanho da janela
 
         if (y > windowHeight) { //compara a distancia do top da janela com o tamanho da janela
 
@@ -60,8 +39,10 @@ $(document).ready(function() {
             });
 
             $(".navbar-default .navbar-nav>li>a").css({
-                'color': '#222'
+                'color': '#3fa5f0'
             });
+
+            $("#btn-fixed").addClass("btn-fixed");
             
         } else {
             $('#logo-color').hide();
@@ -74,6 +55,7 @@ $(document).ready(function() {
             $(".navbar-default .navbar-nav>li>a").css({
                 'color': 'white'
             });
+            $("#btn-fixed").removeClass("btn-fixed");
         }
     });
 
@@ -112,14 +94,5 @@ $(document).ready(function() {
         // instead of a settings object
       ]
     });
-
-
-    //lavalamp
-    $('#focus').lavalamp({
-      easing: 'swing',
-      enableFocus: true
-    });
-
-    $('#setactive').data('lavalampActive',a).lavalamp('update');
 
 });

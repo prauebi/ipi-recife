@@ -32,13 +32,11 @@ ul.nav {
     margin-left: 50px;
 }
 
-.navbar-default .navbar-nav>li>a{
+.menu-topo a{
     color: white;
-    transition: all .2s;
 }
-.navbar-nav>li>a:hover{
-    color: white!important;
-    background-color: #3fa5f0!important;
+.menu-topo a:hover{
+    border-bottom: #3fa5f0 3px solid;
 }
 
 #logo-color {
@@ -62,9 +60,8 @@ ul.nav {
 #btn-fixed {
     border-radius: 40px;
     transition: all .2s;
-    color: white!important;
+    color: white;
     font-weight: bolder;
-    opacity: .8;
     background: #218df9; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, #0079ff , #3ea3f1); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, #0079ff, #3ea3f1); /* For Opera 11.1 to 12.0 */
@@ -72,11 +69,19 @@ ul.nav {
     background: linear-gradient(to right, #0079ff , #3ea3f1); /* Standard syntax */
 }
 
-#btn-fixed:hover {
-    opacity: 1;
+.btn-fixed {
+    background: transparent!important;
+    border: 3px solid currentColor;
+    color: inherit;
 }
 
-.top-buffer { margin-top:20em; }
+.btn-fixed:hover {
+    background: #218df9!important;
+    border: 3px solid currentColor;
+    color: white!important;
+}
+
+.top-buffer { margin-top:18em; }
 .show-grid{background-color: #FFF;}
 /*  HEADER  */
 
@@ -91,22 +96,22 @@ ul.nav {
 }
 
 .card-content {
-    padding: 20px 20px 20px 100px;
     transition: all .2s;
-    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 20px;
 }
 
-.card-icon {
-    font-size: 10em;
-    text-align: center;
+.card-content img {
     transition: all .2s;
 }
 
 .card-caption {
     font-size: 1.3em;
     transition: all .2s;
-    padding-top: 40px;
+    padding-top: 20px;
     opacity: 0;
+    float: right;
 }
 
 .card-footer {
@@ -119,9 +124,11 @@ ul.nav {
 }
 
 .show-caption {
-    margin-left: -50px;
     opacity: 1;
-    padding-left: 80px;
+}
+
+.push-img-left {
+    transform: translateX(-10%);
 }
 
 .nav-bottom { 
@@ -186,33 +193,35 @@ ul.nav {
     font-weight: bolder;
 }
 
-/*   SLIDES BLOG  */
-
-.slider {width: 100%;}
-
-.slick-prev:before,
-.slick-next:before {
-    font-family: 'slick';
-    color: black;
-}
-
-/*   SLIDES BLOG  */
-
 .titulo-mapa {
     color: #87c241;
     border-left: 5px solid currentColor;
-    padding: 5px 10px;
+    padding: 10px 10px;
     text-transform: uppercase;
     font-weight: bolder;
 }
 
 .mapa {
     width: 100%;
-    background-color: #cbe6a3;
+    background-color: #EAEAEA;
     display: block;
-    height: 300px;
+    height: 500px;
+    margin: 50px auto;
 }
 /*  SITE CONTENT  */
+
+
+/*   SLIDES BLOG  */
+
+.slider {width: 100%;}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick'!important;
+    color: black;
+}
+
+/*   SLIDES BLOG  */
 
 
 /*  FOOTER  */
@@ -234,9 +243,10 @@ ul.nav {
 }
 
 
-.sou-novo, .sou-novo a:hover       {background: #f0b920;color: #f0b920;}
-.sou-membro, .sou-membro a:hover   {background: #3fa5f0;color: #3fa5f0;}
-.mensagens, .mensagens a:hover     {background: #2cc76c;color: #2cc76c;}
+.sou-novo, .sou-novo a:hover       {background: #f0b920;color: #f0b920;}    /*AMARELO*/
+.sou-membro, .sou-membro a:hover   {background: #3fa5f0;color: #3fa5f0;}    /*AZUL*/
+.mensagens, .mensagens a:hover     {background: #2cc76c;color: #2cc76c;}    /*VERDE*/
+
 
 /*  RESPONSIVO  */
 @media (max-width: 992px) {
