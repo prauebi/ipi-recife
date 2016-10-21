@@ -32,7 +32,9 @@ ul.nav {
     margin-left: 50px;
 }
 
-.menu-topo a{
+.menu-topo a,
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover{
     color: white;
 }
 .menu-topo a:hover{
@@ -43,21 +45,14 @@ ul.nav {
     display: none;
 }
 
-
-/*  NAVBAR  */
-
-/*  HEADER  */
-.header-full {
-    background: url(images/slide-home.jpg) no-repeat fixed;
-    background-size: cover;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transition: all 0.3s;
-    text-align: center;
+.navbar-white {
+    background: white;
 }
 
-#btn-fixed {
+.navbar-white a {color:#3fa5f0!important;}
+
+#btn-fixed,
+#btn-fixed-page {
     border-radius: 40px;
     transition: all .2s;
     color: white;
@@ -81,8 +76,70 @@ ul.nav {
     color: white!important;
 }
 
+
+/*  NAVBAR  */
+
+/*  HEADER  */
+.header-full {
+    background: url(images/slide-home.jpg) no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.header-page {
+    position: relative;
+    margin-top: 126px;
+    margin-bottom: 3em;
+    color: white;
+}
+
+.content-header-page {
+    background: url(images/slide-home.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 4em;
+    height: 200px;
+}
+
+.content-header-page h1 {
+    border-left: 5px solid currentColor;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.menu-page {
+    background: #8cc540;
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 15px 0 5px;
+    font-size: 1.2em;
+}
+
+.menu-page a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none; 
+    text-transform: uppercase;
+}
+
+.menu-page a:hover {
+    color: #336502;
+}
+
+.menu-page li {
+    display: inline;
+    padding-left: 10px;
+}
+
 .top-buffer { margin-top:18em; }
-.show-grid{background-color: #FFF;}
+.show-grid  {background-color: #FFF;}
+
 /*  HEADER  */
 
 
@@ -208,6 +265,14 @@ ul.nav {
     height: 500px;
     margin: 50px auto;
 }
+
+main h2 {
+    color: #8cc540;
+    text-transform: uppercase;
+    border-bottom: dashed 3px currentColor;
+    margin: 35px auto;
+}
+
 /*  SITE CONTENT  */
 
 

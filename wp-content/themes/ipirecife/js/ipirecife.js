@@ -34,13 +34,7 @@ $(document).ready(function() {
             $('#logo-color').show();
             $('#logo-bw').hide();
 
-            $(".navbar-default").css({
-                'background': 'white'
-            });
-
-            $(".navbar-default .navbar-nav>li>a").css({
-                'color': '#3fa5f0'
-            });
+            $(".nav-home").addClass("navbar-white");
 
             $("#btn-fixed").addClass("btn-fixed");
             
@@ -48,13 +42,8 @@ $(document).ready(function() {
             $('#logo-color').hide();
             $('#logo-bw').show();
 
-            $(".navbar-default").css({
-                'background': 'transparent'
-            });
+            $(".nav-home").removeClass("navbar-white");
 
-            $(".navbar-default .navbar-nav>li>a").css({
-                'color': 'white'
-            });
             $("#btn-fixed").removeClass("btn-fixed");
         }
     });
