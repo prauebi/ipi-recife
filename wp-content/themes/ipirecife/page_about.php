@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Exemplo
+Template Name: About
 */
 ?>
 
@@ -24,11 +24,11 @@ Template Name: Exemplo
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="menu-topo"><a href="#">INICIAL</a></li>
-              <li class="menu-topo"><a href="#about">CONHEÇA-NOS</a></li>
-              <li class="menu-topo"><a href="#contact">NOSSOS ENCONTROS</a></li>
-              <li class="menu-topo"><a href="#contact">BLOG</a></li>
-              <li class="menu-topo"><a href="#contact">CONTATO</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>">INICIAL</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/conheca-nos/">CONHEÇA-NOS</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/nossos-encontros/">NOSSOS ENCONTROS</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/blog/">BLOG</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/contato/">CONTATO</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="./" id="btn-fixed-page" class="btn-fixed">QUERO CONTRIBUIR<span class="sr-only">(current)</span></a></li>
@@ -42,7 +42,7 @@ Template Name: Exemplo
         <div class="content-header-page">
 
           <div class="container">
-            <h1>Conheça-nos</h1>
+            <h1><?php the_title(); ?></h1>
           </div>
           
         </div>
@@ -53,7 +53,7 @@ Template Name: Exemplo
               <ul class="navbar-right">
                 <li><a href="">Histórico</a></li>
                 <li><a href="">Nossa Crença</a></li>
-                <li><a href="">Equipe</a></li>
+                <li><a href="#equipe">Equipe</a></li>
                 <li><a href="#localizacao">Localização</a></li>
               </ul>
             </div>
@@ -72,32 +72,151 @@ Template Name: Exemplo
 		<?php while ( have_posts() ) : the_post(); ?>
 
       <div class="container">
-		    <?php the_content(''); ?>
 
-        <h2 id="equipe">equipe</h2>
         <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4"></div>
-          <div class="col-md-4"></div>
-        </div>
-
-        <h2 id="localizacao">localização</h2>
-        <div class="row">
-
-          <div class="col-md-6">
-            Estr. do Arraial, 4362<br>
-            Casa Amarela,<br>
-            Recife - PE,<br>
-            52070-230<br>
+          <h2>Histórico</h2>
+          <div class="col-md-8">
+		        <?php the_content(''); ?>
           </div>
 
-          <div class="col-md-6">
-            contato@primeiraipirecife.com.br<br><br>
-            <b>Telefone:</b><br>
-            (81) 3441-1537
+          <div class="col-md-4" id="thumb-about">
+            <?php
+                  if ( has_post_thumbnail() ) {
+                  the_post_thumbnail();
+            } ?>
           </div>
-
         </div>
+
+        <section id="equipe">
+          <h2>equipe</h2>
+          <div id="equipe" class="row">
+
+            <div class="col-md-4 membro">
+              <div class="ball"></div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-4 membro">
+              <div class="ball"></div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-4 membro">
+              <div class="ball"></div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+          </div>
+        </section> <!-- /#equipe -->
+
+        <section id="nossa-crenca">
+          <h2>nossa crença</h2>
+          <div class="row">
+
+            <div class="col-md-4 crenca">
+              <h4>as escrituras</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-4 crenca">
+              <h4>deus</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-4 crenca">
+              <h4>jesus</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-4 crenca">
+              <h4>espírito santo</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-4 crenca">
+              <h4>salvação</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-4 crenca">
+              <h4>igrejas</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+
+            <div class="col-md-12 text-center">
+              <h4>evangelismo</h4>
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. 
+
+          </div>
+        </section> <!-- /#nossa-crenca -->
+
+        <section id="localizacao">
+          <h2>localização</h2>
+          <div class="row">
+
+            <div class="col-md-6">
+              Estr. do Arraial, 4362<br>
+              Casa Amarela,<br>
+              Recife - PE,<br>
+              52070-230<br>
+            </div>
+
+            <div class="col-md-6">
+              contato@primeiraipirecife.com.br<br><br>
+              <b>Telefone:</b><br>
+              (81) 3441-1537
+            </div>
+
+          </div>
+        </section> <!-- /#localizacao -->
+
 
       </div>
 

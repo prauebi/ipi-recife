@@ -273,16 +273,47 @@ main h2 {
     margin: 35px auto;
 }
 
+main h4 {
+    text-transform: uppercase;
+    color: #666;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#thumb-about img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ball {
+    display: block;
+    height: 220px;
+    width: 220px;
+    background-color: #222;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.membro {
+    text-align: justify;
+}
+
+.crenca {
+    padding: 20px;
+    transition: all .2s;
+}
+
+.crenca:hover {
+    background-color: #ededed;
+}
+
 /*  SITE CONTENT  */
 
 
 /*   SLIDES BLOG  */
 
-.slider {width: 100%;}
-
 .slick-prev:before,
 .slick-next:before {
-    font-family: 'slick'!important;
     color: black;
 }
 

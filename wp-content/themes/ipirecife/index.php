@@ -20,11 +20,11 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="menu-topo"><a href="#">INICIAL</a></li>
-              <li class="menu-topo"><a href="#about">CONHEÇA-NOS</a></li>
-              <li class="menu-topo"><a href="#contact">NOSSOS ENCONTROS</a></li>
-              <li class="menu-topo"><a href="#contact">BLOG</a></li>
-              <li class="menu-topo"><a href="#contact">CONTATO</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>">INICIAL</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/conheca-nos/">CONHEÇA-NOS</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/nossos-encontros/">NOSSOS ENCONTROS</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/blog/">BLOG</a></li>
+              <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/contato/">CONTATO</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="./" id="btn-fixed">QUERO CONTRIBUIR<span class="sr-only">(current)</span></a></li>

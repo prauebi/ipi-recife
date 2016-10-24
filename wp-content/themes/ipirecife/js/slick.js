@@ -44,15 +44,15 @@
                 appendDots: $(element),
                 arrows: true,
                 asNavFor: null,
-                prevArrow: '<div type="div" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="div">Previous</div>',
-                nextArrow: '<div type="div" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="div">Next</div>',
+                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',
+                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,
                 centerPadding: '50px',
                 cssEase: 'ease',
                 customPaging: function(slider, i) {
-                    return $('<div type="div" data-role="none" role="div" tabindex="0" />').text(i + 1);
+                    return $('<button type="button" data-role="none" role="button" tabindex="0" />').text(i + 1);
                 },
                 dots: false,
                 dotsClass: 'slick-dots',
@@ -190,7 +190,7 @@
 
         _.$slideTrack.find('.slick-active').attr({
             'aria-hidden': 'false'
-        }).find('a, input, div, select').attr({
+        }).find('a, input, button, select').attr({
             'tabindex': '0'
         });
 
@@ -1279,7 +1279,7 @@
         _.$slides.add(_.$slideTrack.find('.slick-cloned')).attr({
             'aria-hidden': 'true',
             'tabindex': '-1'
-        }).find('a, input, div, select').attr({
+        }).find('a, input, button, select').attr({
             'tabindex': '-1'
         });
 
@@ -1302,7 +1302,7 @@
                 });
             })
                 .first().attr('aria-selected', 'true').end()
-                .find('div').attr('role', 'div').end()
+                .find('button').attr('role', 'button').end()
                 .closest('div').attr('role', 'toolbar');
         }
         _.activateADA();
