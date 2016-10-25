@@ -124,6 +124,7 @@ ul.nav {
 .menu-page a {
     color: white;
     font-weight: bolder;
+    transition: all 0.2s;
     text-decoration: none; 
     text-transform: uppercase;
 }
@@ -307,6 +308,39 @@ main h4 {
     background-color: #ededed;
 }
 
+#encontros h2 {
+    color: #f18d1e;
+    text-transform: uppercase;
+    border-bottom: dashed 3px currentColor;
+    margin: 35px auto;
+}
+
+#filters {
+    margin:1%;
+    padding:0;
+    list-style:none;
+}
+
+#filters li {
+    float:left;
+}
+
+#filters li span {
+    display: block;
+    padding:5px 20px;       
+    text-decoration:none;
+    color:#666;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#filters li span.active,
+#filters li span:hover,
+#filters li span:active,
+#filters li span:focus {
+    background: #ededed;
+}
+
 /*  SITE CONTENT  */
 
 
@@ -356,4 +390,3 @@ main h4 {
     .top-buffer {margin-top:17em;}
 }
 /*  RESPONSIVO  */
-

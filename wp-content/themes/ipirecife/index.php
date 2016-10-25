@@ -280,5 +280,4 @@
         </section>
       </div>
     </footer>
-    <div id="footer-bg"></div>
 <?php get_footer(); ?>   

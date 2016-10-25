@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Fullwidth
+Template Name: Padrão
 */
 ?>
 
@@ -70,10 +70,10 @@ Template Name: Fullwidth
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="container">
-				<div class="row">
-			        <?php the_content(''); ?>
-	          	</div>
-			</div>
+          <div class="row">
+            <?php the_content(''); ?>
+          </div>
+      </div>
 
 		<?php endwhile; ?>
 

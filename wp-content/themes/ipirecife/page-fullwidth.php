@@ -46,18 +46,6 @@ Template Name: Fullwidth
           </div>
           
         </div>
-
-        <div class="menu-page">
-            <div class="container">
-              <span>Conheça-nos ></span>
-              <ul class="navbar-right">
-                <li><a href="">Histórico</a></li>
-                <li><a href="">Nossa Crença</a></li>
-                <li><a href="#equipe">Equipe</a></li>
-                <li><a href="#localizacao">Localização</a></li>
-              </ul>
-            </div>
-        </div>
         
       </div>
 
@@ -65,15 +53,39 @@ Template Name: Fullwidth
   </header>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="encontros" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="container">
 				<div class="row">
-			        <?php the_content(''); ?>
+					<h2>eventos</h2>
+			        <!-- <?php the_content(''); ?> -->
+
+			        <ul id="filters" class="clearfix">
+			        	Filtrar por:
+						<li><span class="filter active" data-filter=".app, .card, .icon, .logo, .web">MOSTRAR TODOS</span></li>
+						<li><span class="filter" data-filter=".app">EVENTOS REGULARES</span></li>
+						<li><span class="filter" data-filter=".card">JOVENS</span></li>
+						<li><span class="filter" data-filter=".icon">CRIANÇAS</span></li>
+						<li><span class="filter" data-filter=".logo">ADULTOS</span></li>
+						<li><span class="filter" data-filter=".web">MULHERES</span></li>
+						<li><span class="filter" data-filter=".homens">HOMENS</span></li>
+					</ul>
+
+					<div class="col-md-3"><div class="box"></div></div>
+					<div class="col-md-3"><div class="box"></div></div>
+					<div class="col-md-3"><div class="box"></div></div>
+					<div class="col-md-3"><div class="box"></div></div>
+					
+					<div class="col-md-3"><div class="box"></div></div>
+					<div class="col-md-3"><div class="box"></div></div>
+					<div class="col-md-3"><div class="box"></div></div>
+					<div class="col-md-3"><div class="box"></div></div>
+
 	          	</div>
 			</div>
+
 
 		<?php endwhile; ?>
 
@@ -81,5 +93,43 @@ Template Name: Fullwidth
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
+
+	<footer class="container">
+      <div class="row">
+        <section id="footer">
+          <div class="col-md-4">
+            <h2>nossos encontros</h2>
+            <b>Domingos:</b><br>
+            18:30 - Culto de Louvor e Adoração<br><br>
+            
+            <b>Quartas-feiras:</b><br>
+            20:00 Culto da Esperança<br><br>
+
+
+            <b>Escola Bíblica:</b><br>
+            Domingo às 17h
+          </div>
+
+          <div class="col-md-4">
+
+            <h2>localização</h2>
+            Estr. do Arraial, 4362<br>
+            Casa Amarela,<br>
+            Recife - PE,<br>
+            52070-230<br>
+            
+          </div>
+
+          <div class="col-md-4">
+            <h2>contato</h2>
+            <b>Email:</b><br>
+            contato@primeiraipirecife.com.br<br><br>
+            <b>Telefone:</b><br>
+            (81) 3441-1537
+            
+          </div>
+        </section>
+      </div>
+    </footer>
 
 <?php get_footer(); ?>

@@ -228,6 +228,5 @@ Template Name: About
 
 		</main><!-- .site-main -->
   </div><!-- .content-area -->
-  <div id="footer-bg"></div>  
 
 <?php get_footer(); ?>
