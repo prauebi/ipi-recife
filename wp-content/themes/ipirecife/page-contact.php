@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Padrão
+Template Name: Contact
 */
 ?>
 
@@ -46,18 +46,6 @@ Template Name: Padrão
           </div>
           
         </div>
-
-        <div class="menu-page">
-            <div class="container">
-              <span><?php the_title(); ?> ></span>
-              <ul class="navbar-right">
-                <li><a href="">Histórico</a></li>
-                <li><a href="">Nossa Crença</a></li>
-                <li><a href="#equipe">Equipe</a></li>
-                <li><a href="#localizacao">Localização</a></li>
-              </ul>
-            </div>
-        </div>
         
       </div>
 
@@ -65,15 +53,19 @@ Template Name: Padrão
   </header>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="encontros" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="container">
-          <div class="row">
-            <?php the_content(''); ?>
-          </div>
-      </div>
+				<div class="row">
+					<h2>eventos</h2>
+
+			        <?php the_content(''); ?>
+
+      	</div>
+			</div>
+
 
 		<?php endwhile; ?>
 
@@ -81,5 +73,43 @@ Template Name: Padrão
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
+
+	<footer class="container">
+      <div class="row">
+        <section id="footer">
+          <div class="col-md-4">
+            <h2>nossos encontros</h2>
+            <b>Domingos:</b><br>
+            18:30 - Culto de Louvor e Adoração<br><br>
+            
+            <b>Quartas-feiras:</b><br>
+            20:00 Culto da Esperança<br><br>
+
+
+            <b>Escola Bíblica:</b><br>
+            Domingo às 17h
+          </div>
+
+          <div class="col-md-4">
+
+            <h2>localização</h2>
+            Estr. do Arraial, 4362<br>
+            Casa Amarela,<br>
+            Recife - PE,<br>
+            52070-230<br>
+            
+          </div>
+
+          <div class="col-md-4">
+            <h2>contato</h2>
+            <b>Email:</b><br>
+            contato@primeiraipirecife.com.br<br><br>
+            <b>Telefone:</b><br>
+            (81) 3441-1537
+            
+          </div>
+        </section>
+      </div>
+    </footer>
 
 <?php get_footer(); ?>

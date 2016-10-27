@@ -49,7 +49,7 @@ Template Name: About
 
         <div class="menu-page">
             <div class="container">
-              <span>Conheça-nos ></span>
+              <span><?php the_title(); ?> ></span>
               <ul class="navbar-right">
                 <li><a href="">Histórico</a></li>
                 <li><a href="">Nossa Crença</a></li>

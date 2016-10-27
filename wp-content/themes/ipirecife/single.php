@@ -42,21 +42,9 @@ Template Name: Padrão
         <div class="content-header-page">
 
           <div class="container">
-            <h1><?php the_title(); ?></h1>
+            <h1>Blog</h1>
           </div>
           
-        </div>
-
-        <div class="menu-page">
-            <div class="container">
-              <span><?php the_title(); ?> ></span>
-              <ul class="navbar-right">
-                <li><a href="">Histórico</a></li>
-                <li><a href="">Nossa Crença</a></li>
-                <li><a href="#equipe">Equipe</a></li>
-                <li><a href="#localizacao">Localização</a></li>
-              </ul>
-            </div>
         </div>
         
       </div>
@@ -64,22 +52,38 @@ Template Name: Padrão
       
   </header>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<content>
+	<div class="container">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<div class="container">
-          <div class="row">
-            <?php the_content(''); ?>
-          </div>
-      </div>
+			<div class="col-md-4 post-navi" id="prev-post">
+				TITULO DO POST<br>
+				<small>Autor: Lorem Ipsum | Data: 10/02/2016</small>
+			</div>
 
+			<div class="col-md-4 post-navi" id="next-post">
+				TITULO DO POST<br>
+				<small>Autor: Lorem Ipsum | Data: 10/02/2016</small>
+			</div>
+
+
+			<article class="col-md-8 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+
+				<h2 class="entry-title"><a title="<?php printf( esc_attr__( 'Permalink to %s', 'compass' ), the_title_attribute( 'echo=0' ) ); ?>" href="<?php the_permalink(); ?>" rel="bookmark">
+				    <?php the_title(); ?>
+				</a></h2>
+				<i class="fa fa-user" aria-hidden="true"></i> Postado em <?php the_date(); ?> por <?php the_author(); ?>
+
+				<section class="entry-content"><?php the_content(); ?></section><!-- .entry-content -->
+				<section class="entry-meta"><?php if ( count( get_the_category() ) ) : ?>
+			    <span class="cat-links">
+			        Categorias: <?php echo get_the_category_list( ', ' ); ?>
+			    </span>
+				<?php endif; ?></section><!-- .entry-meta -->
+			</article>
 		<?php endwhile; ?>
-
-
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+	</div>
+</content>
 
 <?php get_footer(); ?>

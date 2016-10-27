@@ -83,7 +83,7 @@ Template Name: Fullwidth
 					<div class="col-md-3"><div class="box"></div></div>
 					<div class="col-md-3"><div class="box"></div></div>
 
-	          	</div>
+      	</div>
 			</div>
 
 

@@ -354,6 +354,29 @@ main h4 {
 /*  SITE CONTENT  */
 
 
+
+/*  SITE CONTENT  */
+.post-navi {
+    color: #ccc;
+    border: 2px solid currentColor;
+    text-align: center;
+    font-weight: bolder;
+    padding: 7px;
+    transition: all .2s;
+}
+
+.post-navi:hover {
+    background: #ccc;
+    color: white;
+    border-color: #ccc;
+}
+
+article {border: 1px solid black;}
+
+/*  SITE CONTENT  */
+
+
+
 /*   SLIDES BLOG  */
 
 .slick-prev:before,
