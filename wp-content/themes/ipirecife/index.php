@@ -43,16 +43,16 @@
   			<div class="col-md-4">
           <div class="card" id="sou-novo">
 
-            <div class="card-content" id="content-novo">  
+            <div class="card-content center-block" id="content-novo">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home01.png" class="center-block" alt="icone">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home01.png" class="center-block" id="sou-novo-icon"alt="icone">
               </div>  
 
               <div class="card-caption" id="caption-novo">
                 <ul>
-                  <li>Conheça a 1 IPI Recife</li>
-                  <li>Link 02</li>
-                  <li>Link 03</li>
+                  <li><a href="#">Conheça a 1ª IPI Recife</a></li>
+                  <li><a href="#">Nossa Crença</a></li>
+                  <li><a href="#">Nossos Encontros</a></li>
                 </ul>
               </div>
             </div>
@@ -66,7 +66,7 @@
           <div class="card" id="sou-membro">
             <div class="card-content center-block text-center" id="content-membro">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home02.png" class="center-block" alt="icone 2">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home02.png" class="center-block" id="sou-membro-icon" alt="icone 2">
               </div>  
 
               <div class="card-caption" id="caption-membro">
@@ -87,7 +87,7 @@
           <div class="card" id="mensagens">
             <div class="card-content" id="content-mensagens">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home03.png" class="center-block" alt="icone 3">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home03.png" class="center-block" id="mensagens-icon" alt="icone 3">
               </div>  
 
               <div class="card-caption" id="caption-mensagens">
@@ -239,9 +239,7 @@
 
     </section> <!-- TITULO MAPA -->
 
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1661.0695596544308!2d-34.921634047790924!3d-8.02865544166888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19a446397051%3A0x3b430bed6df3b7!2sPrimeira+Igreja+Presbiteriana+Independente+do+Recife!5e0!3m2!1spt-BR!2sbr!4v1476970852028" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+    <?php include "map.php" ?>
 
     <footer class="container">
       <div class="row">

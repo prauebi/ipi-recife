@@ -3,20 +3,22 @@ $(document).ready(function() {
 	$("#sou-novo").hover(function() {
       $(".nav-bottom").toggleClass("sou-novo");          //Muda a cor da barra de fundo
     	$(".lavalamp-object").toggleClass("sou-novo");     //Muda a cor do triangulo lavalamp
-      $("#content-novo").toggleClass("push-img-left");    //Mostra os links
-    	$("#caption-novo").toggleClass("show-caption");
+    	$("#caption-novo").fadeIn().toggleClass("show-caption");
+      $("#sou-novo-icon").toggleClass("pull-img-right");
   });
 
   $("#sou-membro").hover(function() {
       $(".nav-bottom").toggleClass("sou-membro");
       $(".lavalamp-object").toggleClass("sou-membro");
       $("#caption-membro").toggleClass("show-caption");
-	});
+      $("#sou-membro-icon").toggleClass("pull-img-right");
+  });
 
-	$("#mensagens").hover(function() {
+  $("#mensagens").hover(function() {
       $(".nav-bottom").toggleClass("mensagens");
-    	$(".lavalamp-object").toggleClass("mensagens");
-    	$("#caption-mensagens").toggleClass("show-caption");
+      $(".lavalamp-object").toggleClass("mensagens");
+      $("#caption-mensagens").toggleClass("show-caption");
+      $("#mensagens-icon").toggleClass("pull-img-right");
 	});
 
 

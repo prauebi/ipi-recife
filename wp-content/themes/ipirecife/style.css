@@ -158,9 +158,11 @@ ul.nav {
     margin: 0 auto;
     width: 80%;
     padding-top: 20px;
+    display: flex;
 }
 
-.card-content img {
+.card-icon img {
+    transform: translateX(100%);
     transition: all .2s;
 }
 
@@ -185,8 +187,16 @@ ul.nav {
     opacity: 1;
 }
 
-.push-img-left {
-    transform: translateX(-10%);
+.pull-img-right {
+    transform: translateX(0)!important;
+}
+
+.flex {
+    display: flex!important;
+}
+
+.block {
+    display: block!important;
 }
 
 .nav-bottom { 

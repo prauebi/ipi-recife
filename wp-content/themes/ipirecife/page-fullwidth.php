@@ -62,8 +62,8 @@ Template Name: Fullwidth
 					<h2>eventos</h2>
 			        <!-- <?php the_content(''); ?> -->
 
-			        <ul id="filters" class="clearfix">
-			        	Filtrar por:
+	        <ul id="filters" class="clearfix">
+			      <li>Filtrar por:</li>
 						<li><span class="filter active" data-filter=".app, .card, .icon, .logo, .web">MOSTRAR TODOS</span></li>
 						<li><span class="filter" data-filter=".app">EVENTOS REGULARES</span></li>
 						<li><span class="filter" data-filter=".card">JOVENS</span></li>
