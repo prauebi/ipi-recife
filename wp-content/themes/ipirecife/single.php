@@ -55,35 +55,61 @@ Template Name: Padrão
 <content>
 	<div class="container">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <div class="row">
 
-			<div class="col-md-4 post-navi" id="prev-post">
-				TITULO DO POST<br>
-				<small>Autor: Lorem Ipsum | Data: 10/02/2016</small>
-			</div>
+      <div class="col-xs-12 col-sm-12 col-md-8">
+        <?php while ( have_posts() ) : the_post(); ?>
 
-			<div class="col-md-4 post-navi" id="next-post">
-				TITULO DO POST<br>
-				<small>Autor: Lorem Ipsum | Data: 10/02/2016</small>
-			</div>
+          <?php include "post-navigation.php" ?>
 
 
-			<article class="col-md-8 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+          <article class="<?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
-				<h2 class="entry-title"><a title="<?php printf( esc_attr__( 'Permalink to %s', 'compass' ), the_title_attribute( 'echo=0' ) ); ?>" href="<?php the_permalink(); ?>" rel="bookmark">
-				    <?php the_title(); ?>
-				</a></h2>
-				<i class="fa fa-user" aria-hidden="true"></i> Postado em <?php the_date(); ?> por <?php the_author(); ?>
+            <div class="entry-title">
+              <h2><?php the_title(); ?></h2>
+              <i class="fa fa-user" aria-hidden="true"></i>Autor: <?php the_author(); ?> | Data: <?php the_date(); ?>
+            </div>
 
-				<section class="entry-content"><?php the_content(); ?></section><!-- .entry-content -->
-				<section class="entry-meta"><?php if ( count( get_the_category() ) ) : ?>
-			    <span class="cat-links">
-			        Categorias: <?php echo get_the_category_list( ', ' ); ?>
-			    </span>
-				<?php endif; ?></section><!-- .entry-meta -->
-			</article>
-		<?php endwhile; ?>
-	</div>
+            <div class="entry-thumb">
+              <?php if ( has_post_thumbnail() ) {the_post_thumbnail();} ?>
+            </div>
+
+            <div class="read-ctrl row">
+
+              <div class="col-md-4">
+                Aumentar tamanho da letra: <span class="plus">+</span>  <span class="minus">-</span>
+              </div>
+
+              <div class="col-md-4">
+                Alterar fonte do texto: <span class="plus"><</span>  <span class="minus">></span>
+              </div>
+
+              <div class="col-md-4">
+                <span class="read-mode ">MODO LEITURA</span>
+              </div>
+            
+            </div>
+
+            <section class="entry-content"><?php the_content(); ?></section><!-- .entry-content -->
+            <section class="entry-meta"><?php if ( count( get_the_category() ) ) : ?>
+              <span class="cat-links">
+                  Categorias: <?php echo get_the_category_list( ', ' ); ?>
+              </span>
+            <?php endif; ?></section><!-- .entry-meta -->
+          </article>
+
+          <?php include "post-navigation.php" ?>
+
+        <?php endwhile; ?>
+      </div>
+
+      <aside class="col-xs-12 col-md-4">
+        <?php get_sidebar(); ?>
+      </aside>
+
+    </div> <!-- END ROW -->
+
+  </div>
 </content>
 
 <?php get_footer(); ?>

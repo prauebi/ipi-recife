@@ -1,4 +1,3 @@
-
     <div id="footer-bg"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->

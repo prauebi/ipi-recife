@@ -128,10 +128,12 @@
             <div class="col-md-3 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
               <div class="box">
+                <a title="<?php printf( esc_attr__( '%s', 'compass' ), the_title_attribute( 'echo=0' ) ); ?>" href="<?php the_permalink(); ?>" rel="bookmark">
                 <?php
                   if ( has_post_thumbnail() ) {
                   the_post_thumbnail();
                 } ?>
+                </a>
               </div>
 
             </div>
