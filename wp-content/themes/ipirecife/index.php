@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <body>
+  <body onload="load()">
 
     <div class="header-full">
 
@@ -27,7 +27,7 @@
               <li class="menu-topo"><a href="<?php echo get_home_url(); ?>/contato/">CONTATO</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./" id="btn-fixed">QUERO CONTRIBUIR<span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="<?php echo get_home_url(); ?>/quero-contribuir/" id="btn-fixed">QUERO CONTRIBUIR<span class="sr-only">(current)</span></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -45,14 +45,14 @@
 
             <div class="card-content center-block" id="content-novo">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home01.png" class="center-block" id="sou-novo-icon"alt="icone">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home01.png" id="sou-novo-icon"alt="icone">
               </div>  
 
               <div class="card-caption" id="caption-novo">
                 <ul>
-                  <li><a href="#">Conheça a 1ª IPI Recife</a></li>
-                  <li><a href="#">Nossa Crença</a></li>
-                  <li><a href="#">Nossos Encontros</a></li>
+                  <li><a href="<?php echo get_home_url(); ?>/conheca-nos/">Conheça a 1ª IPI Recife</a></li>
+                  <li><a href="<?php echo get_home_url(); ?>/conheca-nos/#nossa-crenca">Nossa Crença</a></li>
+                  <li><a href="<?php echo get_home_url(); ?>/nossos-encontros/">Nossos Encontros</a></li>
                 </ul>
               </div>
             </div>
@@ -64,16 +64,16 @@
 
         <div class="col-md-4 active">
           <div class="card" id="sou-membro">
-            <div class="card-content center-block text-center" id="content-membro">  
+            <div class="card-content center-block" id="content-membro">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home02.png" class="center-block" id="sou-membro-icon" alt="icone 2">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home02.png" id="sou-membro-icon" alt="icone 2">
               </div>  
 
               <div class="card-caption" id="caption-membro">
                 <ul>
-                  <li>Link 01</li>
-                  <li>Link 02</li>
-                  <li>Link 03</li>
+                  <li><a href="">Área do Membro</a></li>
+                  <li><a href="<?php echo get_home_url(); ?>/nossos-encontros/">Nossos Encontros</a></li>
+                  <li><a href="<?php echo get_home_url(); ?>/quero-contribuir/">Quero Contribuir</a></li>
                 </ul>
               </div>
             </div> 
@@ -85,16 +85,14 @@
 
         <div class="col-md-4">
           <div class="card" id="mensagens">
-            <div class="card-content" id="content-mensagens">  
+            <div class="card-content center-block" id="content-mensagens">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home03.png" class="center-block" id="mensagens-icon" alt="icone 3">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home03.png" id="mensagens-icon" alt="icone 3">
               </div>  
 
               <div class="card-caption" id="caption-mensagens">
                 <ul>
-                  <li>Link 01</li>
-                  <li>Link 02</li>
-                  <li>Link 03</li>
+                  <li><a href="#">Conheça nosso blog</a></li>
                 </ul>
               </div>
             </div> 

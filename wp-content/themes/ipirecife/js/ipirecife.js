@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$("#sou-novo").hover(function() {
       $(".nav-bottom").toggleClass("sou-novo");          //Muda a cor da barra de fundo
     	$(".lavalamp-object").toggleClass("sou-novo");     //Muda a cor do triangulo lavalamp
-    	$("#caption-novo").fadeIn().toggleClass("show-caption");
+    	$("#caption-novo").toggleClass("show-caption");
       $("#sou-novo-icon").toggleClass("pull-img-right");
   });
 
@@ -87,5 +87,3 @@ $(document).ready(function() {
     });
 
 });
-
-

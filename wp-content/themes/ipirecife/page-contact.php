@@ -59,9 +59,17 @@ Template Name: Contact
 
 			<div class="container">
 				<div class="row">
-					<h2>eventos</h2>
+					<h2>Entre em Contato conosco!</h2>
 
 			        <?php the_content(''); ?>
+
+              <form method="post" id="form">
+                <input type="text" name="name" placeholder="Digite seu nome completo aqui">
+                <input type="text" name="email" placeholder="Digite seu email">
+                <input type="text" name="phone" placeholder="Digite seu número">
+                <textarea name="assunto"></textarea>
+                <input type="submit" name="submit" value="Enviar">
+              </form>
 
       	</div>
 			</div>
@@ -73,6 +81,8 @@ Template Name: Contact
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
+
+  <?php include "map.php" ?>
 
 	<footer class="container">
       <div class="row">
