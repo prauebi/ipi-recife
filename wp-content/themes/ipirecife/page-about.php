@@ -73,8 +73,8 @@ Template Name: About
 
       <div class="container">
 
-        <div class="row" id="historico">
-          <h2>Histórico</h2>
+        <div class="row">
+          <h2 id="historico" class="target">Histórico</h2>
           <div class="col-md-8">
 		        <?php the_content(''); ?>
           </div>
@@ -83,12 +83,12 @@ Template Name: About
             <?php
                   if ( has_post_thumbnail() ) {
                   the_post_thumbnail();
-            } ?>
+                } ?>
           </div>
         </div>
 
         <section id="equipe">
-          <h2>equipe</h2>
+          <h2 class="target">equipe</h2>
           <div id="equipe" class="row">
 
             <div class="col-md-4 membro">
@@ -125,7 +125,7 @@ Template Name: About
         </section> <!-- /#equipe -->
 
         <section id="nossa-crenca">
-          <h2>nossa crença</h2>
+          <h2 class="target">nossa crença</h2>
           <div class="row">
 
             <div class="col-md-4 crenca">
@@ -198,7 +198,7 @@ Template Name: About
         </section> <!-- /#nossa-crenca -->
 
         <section id="localizacao">
-          <h2>localização</h2>
+          <h2 class="target">localização</h2>
           <div class="row">
 
             <div class="col-md-6">

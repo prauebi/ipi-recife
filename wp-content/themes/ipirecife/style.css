@@ -515,6 +515,13 @@ h5.entry-title {
 .mensagens, .mensagens a:hover     {background: #2cc76c;color: #2cc76c;}    /*VERDE*/
 
 
+.target:before {
+  content:"";
+  display:block;
+  height:200px; /* fixed header height*/
+  margin:-200px 0 0; /* negative fixed header height */
+}
+
 /*  RESPONSIVO  */
 @media (max-width: 992px) {
 
