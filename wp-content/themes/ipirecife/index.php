@@ -66,7 +66,7 @@
           <div class="card" id="sou-membro">
             <div class="card-content center-block" id="content-membro">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home02.png" id="sou-membro-icon" alt="icone 2">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home03.png" id="sou-membro-icon" alt="icone 2">
               </div>  
 
               <div class="card-caption" id="caption-membro">
@@ -87,7 +87,7 @@
           <div class="card" id="mensagens">
             <div class="card-content center-block" id="content-mensagens">  
               <div class="card-icon">
-                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home03.png" id="mensagens-icon" alt="icone 3">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icon-home02.png" id="mensagens-icon" alt="icone 3">
               </div>  
 
               <div class="card-caption" id="caption-mensagens">
