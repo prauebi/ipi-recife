@@ -1,11 +1,10 @@
 <?php
 	add_theme_support( 'post-thumbnails' );
 
-// Custo Post Type - Eventos
+// Custom Post Type - Eventos
 function create_post_eventos() {
 
 	register_post_type( 'eventos',
-	// CPT Options
 		array(
 			'labels' => array(
 				'name' => __( 'Eventos' ),
@@ -17,62 +16,37 @@ function create_post_eventos() {
 		)
 	);
 }
-// Hooking up our function to theme setup
 add_action( 'init', 'create_post_eventos' );
 
-
-add_action( 'init', 'create_tipo_evento' );
-
-function create_tipo_evento() {
-	register_taxonomy(
-		'tipo_evento',
-		'eventos',
-		array(
-			'label' => __( 'Tipo Evento' ),
-			'rewrite' => array( 'slug' => 'tipo_evento' ),
-			'hierarchical' => true,
-		)
-	);
-}
-
-
-
-/*
-* Creating a function to create our CPT
-*/
 function custom_post_type_eventos() {
 
-// Set UI labels for Custom Post Type
+// Rotulos do Custom Post Type - Eventos
 	$labels = array(
-		'name'                => _x( 'Eventos', 'Post Type General Name', 'twentythirteen' ),
-		'singular_name'       => _x( 'Evento', 'Post Type Singular Name', 'twentythirteen' ),
-		'menu_name'           => __( 'Eventos', 'twentythirteen' ),
-		'parent_item_colon'   => __( 'Parent Evento', 'twentythirteen' ),
-		'all_items'           => __( 'Todos Eventos', 'twentythirteen' ),
-		'view_item'           => __( 'Ver Evento', 'twentythirteen' ),
-		'add_new_item'        => __( 'Adicionar Evento', 'twentythirteen' ),
-		'add_new'             => __( 'Adicionar Novo', 'twentythirteen' ),
-		'edit_item'           => __( 'Editar Evento', 'twentythirteen' ),
-		'update_item'         => __( 'Atualizar Evento', 'twentythirteen' ),
-		'search_items'        => __( 'Procurar Evento', 'twentythirteen' ),
-		'not_found'           => __( 'Evento não encontrado :(', 'twentythirteen' ),
-		'not_found_in_trash'  => __( 'Evento não encontrado :(', 'twentythirteen' ),
+		'name'                => _x( 'Eventos', 'Post Type General Name', 'ipirecife' ),
+		'singular_name'       => _x( 'Evento', 'Post Type Singular Name', 'ipirecife' ),
+		'menu_name'           => __( 'Eventos', 'ipirecife' ),
+		'parent_item_colon'   => __( 'Parent Evento', 'ipirecife' ),
+		'all_items'           => __( 'Todos Eventos', 'ipirecife' ),
+		'view_item'           => __( 'Ver Evento', 'ipirecife' ),
+		'add_new_item'        => __( 'Adicionar Evento', 'ipirecife' ),
+		'add_new'             => __( 'Adicionar Novo', 'ipirecife' ),
+		'edit_item'           => __( 'Editar Evento', 'ipirecife' ),
+		'update_item'         => __( 'Atualizar Evento', 'ipirecife' ),
+		'search_items'        => __( 'Procurar Evento', 'ipirecife' ),
+		'not_found'           => __( 'Evento não encontrado :(', 'ipirecife' ),
+		'not_found_in_trash'  => __( 'Evento não encontrado :(', 'ipirecife' ),
 	);
 	
-// Set other options for Custom Post Type
+// Opções do Custom Post Type - Eventos
 	
 	$args = array(
-		'label'               => __( 'eventos', 'twentythirteen' ),
-		'description'         => __( 'Eventos', 'twentythirteen' ),
+		'label'               => __( 'eventos', 'ipirecife' ),
+		'description'         => __( 'Eventos', 'ipirecife' ),
 		'labels'              => $labels,
-		// Features this CPT supports in Post Editor
+		// Caracteristicas suportadas no Custom Post Type - Eventos
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		// Associando a taxonomia tipo eventos ao Custom Post Type - Eventos 
 		'taxonomies'          => array( 'tipos_eventos' ),
-		/* A hierarchical CPT is like Pages and can have
-		* Parent and child items. A non-hierarchical CPT
-		* is like Posts.
-		*/	
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -87,15 +61,24 @@ function custom_post_type_eventos() {
 		'capability_type'     => 'page',
 	);
 	
-	// Registering your Custom Post Type
 	register_post_type( 'eventos', $args );
 
 }
 
-
-/* Hook into the 'init' action so that the function
-* Containing our post type registration is not 
-* unnecessarily executed. 
-*/
-
 add_action( 'init', 'custom_post_type_eventos', 0 );
+
+// Taxonomia Tipo Eventos
+
+function create_tipo_evento() {
+	register_taxonomy(
+		'tipo_evento',
+		'eventos',
+		array(
+			'label' => __( 'Tipo Evento' ),
+			'rewrite' => array( 'slug' => 'tipo_evento' ),
+			'hierarchical' => true,
+		)
+	);
+}
+add_action( 'init', 'create_tipo_evento' );
+
