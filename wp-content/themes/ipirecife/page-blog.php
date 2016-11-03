@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Blog
 */
 ?>
 
@@ -53,36 +53,73 @@ Template Name: Contact
   </header>
 
 	<div id="primary" class="content-area">
-		<main id="contact" class="site-main" role="main">
+		<main id="posts" class="site-main container" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<div class="container">
+			<div class="row">
 
-			<div class="container">
-				<div class="row">
-					<h2>Entre em Contato conosco!</h2>
+			    <div class="col-xs-12 col-sm-12 col-md-8">
+			        <h2>todos os posts</h2>
 
-			        <?php the_content(''); ?>
+		            <div class="col-md-4">
 
-              <form method="post" id="form">
-                <input type="text" name="name" placeholder="Digite seu nome completo aqui">
-                <input type="text" name="email" placeholder="Digite seu email">
-                <input type="text" name="phone" placeholder="Digite seu número">
-                <textarea name="assunto"></textarea>
-                <input type="submit" name="submit" value="Enviar">
-              </form>
+						<div class="box"></div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-      	</div>
+						<div class="text-center">
+			                <span class="read-mode ">LEIA MAIS</span>
+			            </div>
+
+		            </div>
+
+		            <div class="col-md-4">
+		            
+						<div class="box"></div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+						<div class="text-center">
+			                <span class="read-mode ">LEIA MAIS</span>
+			            </div>
+
+		            </div>
+
+		            <div class="col-md-4">
+		            
+						<div class="box"></div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+						<div class="text-center">
+			                <span class="read-mode ">LEIA MAIS</span>
+			            </div>
+
+		            </div>
+
+			    </div>
+
+			    <aside class="col-xs-12 col-md-4">
+			        <?php get_sidebar(); ?>
+			    </aside>
+
 			</div>
-
-
-		<?php endwhile; ?>
-
-
+		</div>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
-
-  <?php include "map.php" ?>
 
 	<footer class="container">
       <div class="row">

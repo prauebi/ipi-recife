@@ -251,6 +251,7 @@ ul.nav {
     position: relative;
     color: white;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .box img {
@@ -323,7 +324,9 @@ main h4 {
     background-color: #ededed;
 }
 
-#encontros h2 {
+#encontros h2,
+#posts h2,
+#contact h2 {
     color: #f18d1e;
     text-transform: uppercase;
     border-bottom: dashed 3px currentColor;
@@ -479,6 +482,10 @@ aside h3 {
 h5.entry-title {
     color: #444;
     text-decoration: none;
+}
+
+#posts h2 {
+    margin-top: 3px;
 }
 
 /*   SLIDES BLOG  */

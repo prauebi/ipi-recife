@@ -60,7 +60,7 @@ Template Name: Padrão
       <div class="col-xs-12 col-sm-12 col-md-8">
         <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php include "post-navigation.php" ?>
+
 
 
           <article class="<?php post_class(); ?>" id="post-<?php the_ID(); ?>">
