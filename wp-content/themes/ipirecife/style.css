@@ -250,7 +250,7 @@ ul.nav {
     max-height: 195px;
     position: relative;
     color: white;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -486,6 +486,16 @@ h5.entry-title {
 
 #posts h2 {
     margin-top: 3px;
+}
+
+.post h3 {
+    color:#f18d1e;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.post p {
+    text-align: justify;
 }
 
 /*   SLIDES BLOG  */
